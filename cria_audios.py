@@ -1,4 +1,9 @@
 from gtts import gTTS
+from playsound import playsound
 
-tts = gTTS('Olá, eu sou RAZ', lang='pt-br')
-tts.save('audios/hello.mp3')
+def cria_audio(audio):
+    tts = gTTS(audio, lang='pt-br')
+    tts.save('audios/bem_vindo.mp3')
+    playsound('audios/bem_vindo.mp3')
+
+cria_audio('Eu sou RAZ!')
